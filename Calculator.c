@@ -8,7 +8,7 @@ int main(){
   time_t t;
   struct tm *ptr;
   t = time(NULL); // Get current time 
-  ptr = gmtime(&t); // Get local time
+  ptr = gmtime(&t); // Get UTC games 
   // Correct time in Indian standard time
   ptr->tm_hour += 5;
   ptr->tm_min += 30;
