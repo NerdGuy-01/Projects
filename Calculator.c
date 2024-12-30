@@ -8,7 +8,18 @@ int main(){
   time_t t;
   struct tm *ptr;
   t = time(NULL); // Get current time 
-  ptr = localtime(&t); // Get local time 
+  ptr = gmtime(&t); // Get local time
+  // Correct time in Indian standard time
+  ptr->tm_hour += 5;
+  ptr->tm_min += 30;
+  // Handles Time overflow
+   if(ptr->tm_min >=60){
+   ptr->tm_min -=60;
+    ptr->tm_hour++;
+    } 
+   if(ptr->tm_hour >=24){
+  ptr->tm_hour -=24;
+   } 
   // For comparsion get int hour from struct tm
   int hour = ptr->tm_hour;
   // Checking time
