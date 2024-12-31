@@ -2,7 +2,8 @@
 #include<stdio.h>
 #include<time.h>
 int main(){
-  char user_name[50];
+  char user_name[50],choice[25];
+  int input,dig;
   printf("Enter your name :");
   scanf("%s",user_name);
   time_t t;
@@ -32,4 +33,40 @@ int main(){
   else{
     printf("Good evening %s",user_name);
   }
+
+  printf("\n %s You can perform the following tasks from this program \U0001F447\n");
+  printf("\n Addition");
+  printf("Substraction");
+  printf("Multiplication");
+  Printf("Division");
+  // Choosing user input 
+   printf("Your choice ?");
+   scanf("%s%d",choice,&input);
+  // Now asking for user digits and input of those digits
+  printf("How many digits does your calculation require");
+  scanf("%d",&dig);
+  int arr[dig];
+  printf("Enter  %d digits :",dig);
+  for(int i=1;i<dig+1;i++){
+   scanf("%d",&arr[i]); 
+   }
+  // Using switch case 
+  switch(choice[0]){
+    case 'A':
+      add();
+       break;
+     
+case 'S':
+      sub();
+       break;
+   
+case 'M':
+      Mul();
+       break;
+
+ case 'D':
+      Div();
+       break;
+   }
+  
 }
