@@ -3,7 +3,7 @@
 #include<time.h>
 int main(){
   char user_name[50],choice[25];
-  int input,dig;
+  int input,dig,total=0,product=1;
   printf("Enter your name :");
   scanf("%s",user_name);
   time_t t;
@@ -41,7 +41,7 @@ int main(){
   Printf("Division");
   // Choosing user input 
    printf("Your choice ?");
-   scanf("%s%d",choice,&input);
+   scanf("%d",&input);
   // Now asking for user digits and input of those digits
   printf("How many digits does your calculation require");
   scanf("%d",&dig);
@@ -51,21 +51,27 @@ int main(){
    scanf("%d",&arr[i]); 
    }
   // Using switch case 
-  switch(choice[0]){
-    case 'A':
-      add();
+  switch(input){
+    case 1:
+      for(int i=1;i<=dig;i++){
+        total+=arr[i];
+}
+printf("The addtion of %d numbers is : %d",dig,total);
        break;
      
-case 'S':
-      sub();
+case 2:
+     
        break;
    
-case 'M':
-      Mul();
+case 3:
+      for(int i=1;i<=dig;i++){
+       product*=arr[i];
+}
+printf("The Product of %d numbers is : %d",dig,product);
        break;
 
- case 'D':
-      Div();
+ case 4:
+      
        break;
    }
   
