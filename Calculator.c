@@ -9,70 +9,79 @@ int main(){
   time_t t;
   struct tm *ptr;
   t = time(NULL); // Get current time 
-  ptr = gmtime(&t); // Get UTC standard time 
-  // Correct time in Indian standard time
-  ptr->tm_hour += 5;
-  ptr->tm_min += 30;
-  // Handles Time overflow
-   if(ptr->tm_min >=60){
-   ptr->tm_min -=60;
-    ptr->tm_hour++;
-    } 
-   if(ptr->tm_hour >=24){
-  ptr->tm_hour -=24;
-   } 
+  ptr = gmtime(&t); // Get local time 
   // For comparsion get int hour from struct tm
+  ptr->tm_hour += 5; // Handles time in indian standard 
+  ptr->tm_min += 30;
+  // Handles overflow of min and hour
+  if(ptr->tm_min>=60){
+    ptr->tm_min -=60;
+    ptr->tm_hour ++;
+  }
+  if(ptr->tm_hour >=24){
+    ptr->tm_hour -=24;
+  }
   int hour = ptr->tm_hour;
   // Checking time
   if(hour >=5 && hour < 12){
-    printf("Good morning %s",user_name);
+    printf("Good morning %s\n",user_name);
   }
-  else if(hour >=12 && hour<=18){
-    printf("Good afternoon %s",user_name);
+  else if(hour >=12 && hour<=17){
+    printf("Good afternoon %s\n",user_name);
+  
   }
   else{
-    printf("Good evening %s",user_name);
+    printf("Good evening %s\n",user_name);
+    
   }
+  
+   // printf("%s",asctime(ptr)); This program will show the time 
+  printf("\n%s You can perform these tasks with this program \U0001F447\n",user_name);
 
-  printf("\n %s You can perform the following tasks from this program \U0001F447\n");
-  printf("\n Addition");
-  printf("Substraction");
-  printf("Multiplication");
-  Printf("Division");
-  // Choosing user input 
-   printf("Your choice ?");
-   scanf("%d",&input);
-  // Now asking for user digits and input of those digits
-  printf("How many digits does your calculation require");
+    printf("\n Addition\n");
+    printf(" Check whether number is prime or not \n ");
+    printf("Multiplication\n ");
+    printf("Factorial\n");
+  // Choosing user input
+  printf("Your choice(Enter from number 1 to 4) :");
+  scanf("%d",&input);
+  //Checking which input and then Performing actions according to it 
+  if(input==1 || input==3){
+ // Now asking for user digits and those digit input
+  printf("\nHow many digits does your calculations require ?");
   scanf("%d",&dig);
   int arr[dig];
-  printf("Enter  %d digits :",dig);
-  for(int i=1;i<dig+1;i++){
-   scanf("%d",&arr[i]); 
-   }
-  // Using switch case 
-  switch(input){
-    case 1:
-      for(int i=1;i<=dig;i++){
+  printf("Enter %d digits : ",dig);
+  for(int i=0;i<dig;i++){
+    scanf("%d",&arr[i]);
+  }
+    if(input==1){
+      for(int i=0;i<dig;i++){
         total+=arr[i];
-}
-printf("The addtion of %d numbers is : %d",dig,total);
-       break;
-     
-case 2:
-     
-       break;
-   
-case 3:
-      for(int i=1;i<=dig;i++){
-       product*=arr[i];
-}
-printf("The Product of %d numbers is : %d",dig,product);
-       break;
-
- case 4:
-      
-       break;
+      }
+        printf("The Addition of %d numbers is : %d",dig,total);
+    }
+    if(input==3){
+      for(int i=0;i<dig;i++){
+        product*=arr[i];
+      }
+      printf("The product of %d numbers is : %d",dig,product);
+    }
+  }
+ else{
+   if(input==2){
+     printf("Sorry for the inconvience this product is still under development, you can wait for few hours  \U0001F613\n");
    }
+   if(input==4){
+     int f=1,n;
+     printf("Enter number :");
+     scanf("%d",&n);
+     
+     for(int i=1;i<=n;i++){
+       f = f*i;
+     }
+     printf("Factorial of given number is : %d",f);
+   }
+ }
   
 }
