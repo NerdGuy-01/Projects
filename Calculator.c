@@ -60,17 +60,32 @@ int main(){
         total+=arr[i];
       }
         printf("The Addition of %d numbers is : %d",dig,total);
+      pirntf("Ab to Numbers bhi double ho rahe hai tum kab double hoge \U0001F60F");
     }
     if(input==3){
       for(int i=0;i<dig;i++){
         product*=arr[i];
       }
       printf("The product of %d numbers is : %d",dig,product);
+      printf("Tumhare multiplication ka result kab tak 0 rahega \U0001F61D");
     }
   }
  else{
    if(input==2){
-     printf("Sorry for the inconvience this product is still under development, you can wait for few hours  \U0001F613\n");
+     printf("Enter a number:");
+     scanf("%d",&num);
+     while(num!=0){
+       if(num%i==0){
+         break;
+       }
+       i++;
+     }
+     if(num==i){
+       printf("Yeah number is prime,just like you %s only one \U0001F60E ",user_name);
+     }
+     else{
+       printf("OOPS!! Number is not prime,Don't worry Non prime numbers ki bhi feelings hoti  hai \U0001F97A ");
+     }
    }
    if(input==4){
      int f=1,n;
@@ -81,6 +96,8 @@ int main(){
        f = f*i;
      }
      printf("Factorial of given number is : %d",f);
+      printf("Teri dosti factorial jesi hai, jitni purani utni badi value \U0001F917");
+     
    }
  }
   
