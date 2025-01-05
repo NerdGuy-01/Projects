@@ -100,5 +100,18 @@ int main(){
      
    }
  }
-  
 }
+// You can also Use this aprooach, this aproach was given by Dhruv 
+ // int main(){
+ //   char op;
+ //   int n1,n2,result;
+ //   printf("Enter your calculations\n");
+ //   scanf("%d%c%d",n1,op,n2);
+ //   if(op=='+'){
+ //      result =  n1 +n2;
+ //   }
+ //   if(op=='-'){
+ //     result =  n1 -n2;
+ //   }
+ // printf("Here is the result of this %d",result);
+ // }
