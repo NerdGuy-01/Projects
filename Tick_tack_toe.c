@@ -23,7 +23,7 @@ int main(){
   }
   if( i<GRID_SIZE-1){
     for(j=0;j<GRID_SIZE;j++){
-      printf("---");
+      printf("-");
 
       if(j<GRID_SIZE-1){
         printf("+");
