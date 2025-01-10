@@ -2,7 +2,7 @@
 #include<stdio.h>
 // Making the computer Function
 void computer(){
-// Displaying the grid
+// Displaying the grid and entering the user values 
   
 #include<string.h>
 #define GRID_SIZE 3
