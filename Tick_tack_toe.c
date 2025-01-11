@@ -1,31 +1,26 @@
 // This is a code for Tick tack Toe game 
 #include<stdio.h>
-// Making the computer Function
-void computer(){
-// Displaying the grid and entering the user values 
-  
 #include<string.h>
-#define GRID_SIZE 3
 // Making Computer player function
-int main(){
-  int a[3][3],b[3][3];
+int board_display(){
+  int board[3][3];
   int i,j;
   // Displaying the grid
-  for( i=0;i<GRID_SIZE;i++){
-    for( j=0;j<GRID_SIZE;j++){
+  for( i=0;i<3;i++){
+    for( j=0;j<3;j++){
       printf(" "); // Spaces for Grids 
-      if(j<GRID_SIZE-1){
+      if(j<2){
         printf("|"); // Vertical separator, and the reason I have use GRID_SIZE-1, is because I need to put Line between grids but only 2 not the last one 
       }
     }
     printf("\n");
   
   }
-  if( i<GRID_SIZE-1){
-    for(j=0;j<GRID_SIZE;j++){
+  if( i<3){
+    for(j=0;j<3;j++){
       printf("-");
 
-      if(j<GRID_SIZE-1){
+      if(j<2){
         printf("+");
       }
     }
