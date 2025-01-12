@@ -1,4 +1,3 @@
-// This is a code for Tick tack Toe game 
 #include<stdio.h>
 #include<string.h>
 char board[3][3];
@@ -10,7 +9,6 @@ void display_board(){
           }
       }
       printf("\n");
-  // Loop for printing the Tick tack toe board 
       for (int i = 0; i < 3; i++) {
           for (int j = 0; j < 3; j++) {
               printf(" %c ", board[i][j]);
@@ -20,13 +18,75 @@ void display_board(){
           if (i < 2) printf("---|---|---\n"); // Print row separator
       }
       printf("\n");
+  
 }
+
+// For checking who wins 
+int check(){
+  // For rows and columns 
+  for(int i=0;i<3;i++){
+    if((board[i][0]==board[i][1] && board[i][1]==board[i][2] && board[i][0] != ' ') 
+      || (board[0][i]==board[1][i] && board[1][i]==board[2][i] && board[0][i]!= ' ')){
+      return 1;
+    }
+  }
+    // For diagonals 
+    for(int i =0;i<3;i++){
+      if ((board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != ' ') ||
+        (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != ' ')) {
+        return 1;
+      }
+    }
+    return 0;
+}
+  
+
+int draw(){
+  for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+      if(board[i][j]==' '){
+        return 0; // If any cell is empty then it is not draw.
+      }
+    }
+  }
+  return 1; // all cells are filled, no winner only draw 
+}
+
+void playgame(){
+  int position;
+  char current_player = 'X';
+  int gamewon = 0;
+  while(!gamewon && !draw()){
+    printf("Player %c, Enter your move(position 1-9)",current_player);
+    scanf("%d",&position);
+
+    if(position<1 || position >9){
+      printf("Invalild position!!");
+      continue;
+    }
+    int row = (position-1) /3;
+    int col = (position-1)%3;
+
+    if(board[row][col] == ' '){
+      board[row][col] = current_player;
+      gamewon = check();
+      if(!gamewon){
+        current_player = (current_player == 'X') ? 'O': 'X'; // Switch player
+      }
+    }
+    else{
+      printf("Invalid move. Cell already occupied");
+    }
+  }
+}
+    
+  
 int main(){
   char choice[10];
   int player_choice;
   // Greeting user and taking input
   printf("Hello users Welcome to this Tick tack Toe game\n ");
-  printf("Would you like to know rule ? (yes or no)");
+  printf("Would you like to know rule ?(yes or no)");
   scanf("%s",choice);
   // Checking whether input is yes or no 
   if(strcmp(choice,"Yes")==0 || strcmp(choice,"yes")==0){
@@ -36,16 +96,15 @@ int main(){
       "2. Two players take  turns marking the grid with X or O\n"
       "3.The first player to get three marks in a row, either vertically, horizontally, or diagonally, wins\n"
       "4. If all nine squares are filled and no player has three marks in a row, the game is a tie\n");
-    // 
-    printf("Choose one of the following options\n");
-    printf("A.Play with friends");
-    printf("B. Play with computer");
+     display_board();
+        playgame();
+    
   }
   else if(strcmp(choice,"No")==0 || strcmp(choice,"no")==0){
-    printf("Choose one of the following options\n");
-    printf("A.Play with friends");
-    printf("B. Play with computer");
-  }
+    display_board();
+    playgame();
+}
   else{
     printf(" Eroor !!!! Please enter only in Yes/No");
+  }
 }
