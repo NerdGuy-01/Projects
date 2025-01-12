@@ -1,33 +1,25 @@
 // This is a code for Tick tack Toe game 
 #include<stdio.h>
 #include<string.h>
-// Making Computer player function
-int board_display(){
-  int board[3][3];
-  int i,j;
-  // Displaying the grid
-  for( i=0;i<3;i++){
-    for( j=0;j<3;j++){
-      printf(" "); // Spaces for Grids 
-      if(j<2){
-        printf("|"); // Vertical separator, and the reason I have use GRID_SIZE-1, is because I need to put Line between grids but only 2 not the last one 
+char board[3][3];
+void display_board(){
+  // Loop for giving space to all cells 
+  for (int i = 0; i < 3; i++) {
+          for (int j = 0; j < 3; j++) {
+              board[i][j] = ' '; // Initialize each cell with a space
+          }
       }
-    }
-    printf("\n");
-  
-  }
-  if( i<3){
-    for(j=0;j<3;j++){
-      printf("-");
-
-      if(j<2){
-        printf("+");
+      printf("\n");
+  // Loop for printing the Tick tack toe board 
+      for (int i = 0; i < 3; i++) {
+          for (int j = 0; j < 3; j++) {
+              printf(" %c ", board[i][j]);
+              if (j < 2) printf("|"); // Print column separator
+          }
+          printf("\n");
+          if (i < 2) printf("---|---|---\n"); // Print row separator
       }
-    }
-    printf("\n");
-  }
-}
-  
+      printf("\n");
 }
 int main(){
   char choice[10];
