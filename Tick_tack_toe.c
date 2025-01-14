@@ -41,7 +41,7 @@ int check(){
 }
   
 
-int draw(){
+int if_draw(){
   for(int i=0;i<3;i++){
     for(int j=0;j<3;j++){
       if(board[i][j]==' '){
@@ -56,7 +56,7 @@ void playgame(){
   int position;
   char current_player = 'X';
   int gamewon = 0;
-  while(!gamewon && !draw()){
+  while(!gamewon && !if_draw()){
     printf("Player %c, Enter your move(position 1-9)",current_player);
     scanf("%d",&position);
 
@@ -70,9 +70,14 @@ void playgame(){
     if(board[row][col] == ' '){
       board[row][col] = current_player;
       gamewon = check();
-      if(!gamewon){
-        current_player = (current_player == 'X') ? 'O': 'X'; // Switch player
+      if(gamewon){
+      printf("Player %c wins",current_player);
       }
+      else if(if_draw()){
+        printf("It's a draw");
+      }
+      current_player = (current_player == 'X') ? 'O': 'X'; // Switch player
+
     }
     else{
       printf("Invalid move. Cell already occupied");
