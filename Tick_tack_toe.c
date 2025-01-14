@@ -85,7 +85,7 @@ int main(){
   char choice[10];
   int player_choice;
   // Greeting user and taking input
-  printf("Hello users Welcome to this Tick tack Toe game\n ");
+  printf("Hello users Welcome to this Tick tack Toe game\n\n ");
   printf("Would you like to know rule ?(yes or no)");
   scanf("%s",choice);
   // Checking whether input is yes or no 
