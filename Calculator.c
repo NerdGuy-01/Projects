@@ -3,7 +3,7 @@
 #include<time.h>
 int main(){
   char user_name[50];
-  int input,dig,total=0,product=1;
+  int input,dig,total=0,product=1,num,i;
   printf("Enter your name :");
   scanf("%s",user_name);
   time_t t;
