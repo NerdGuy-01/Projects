@@ -1,0 +1,25 @@
+// IN this file I will create a student manangement system using structures 
+#include<stdio.h>
+#include<string.h>
+int main(){
+int choice,ID;
+    char password;
+    printf("Welcome to student records \n");
+    printf("Please choose one the options below\n");
+    printf("1. Faculty\n");
+    printf("2. Student\n");
+    scanf("%d",&choice);
+    // checking who is Logging in this system
+    if(choice==1){
+        printf("Enter your College ID ");
+        scanf("%d",&ID);
+        printf("Enter your Passoword");
+        scanf("%s",password);
+        if(ID==4261 && strcmp(password,"College_2001@")==0){
+            printf("Welcome");
+        }
+        else{
+            printf("Error!!! Either password or ID is incorrect");
+        }
+    }
+}
