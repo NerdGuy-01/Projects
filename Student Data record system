@@ -22,4 +22,10 @@ int choice,ID;
             printf("Error!!! Either password or ID is incorrect");
         }
     }
+else if(choice==2){
+printf("Hello student what would you like to know \n");
+      printf("Result of Year 2024,2023,2022,2021,2020 \n");
+      printf("Our college Achievement");
+      printf("Our fest");
+}
 }
