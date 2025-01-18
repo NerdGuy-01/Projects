@@ -29,7 +29,7 @@ int choice,ID;
         }
   printf("A. Add Data of student\n");
   printf("B. Delete Data of a student\n");
-  scanf("%d",choice_2);
+  scanf("%c",choice_2);
 if(choice_2=='A'){
 printf("Enter Student's Name,Roll No,Percentage \n ");
 scanf("%s%d%f",st.name,st.roll,st.percentage);
