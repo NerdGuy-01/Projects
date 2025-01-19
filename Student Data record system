@@ -1,12 +1,12 @@
 // IN this file I will create a student manangement system using structures 
 #include<stdio.h>
 #include<string.h>
-int main(){
- struct student{
-char name;
+struct student{
+char name[50];
 int roll;
 float percentage;
 };
+int main(){
 struct student st;
 int choice,ID;
     char password[50],choice_2;
