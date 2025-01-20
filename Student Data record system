@@ -31,8 +31,10 @@ int choice,ID;
   printf("B. Delete Data of a student\n");
   scanf("%c",choice_2);
 if(choice_2=='A'){
-printf("Enter Student's Name,Roll No,Percentage \n ");
-scanf("%s%d%f",st.name,st.roll,st.percentage);
+printf("Enter Student's Name and Roll No \n ");
+scanf("%s%d%f",st.name,st.roll);
+printf("/nEnter Student Percentage :");
+scanf("%f",st.percentage);
 }
     }
 else if(choice==2){
