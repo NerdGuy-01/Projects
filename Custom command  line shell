@@ -1,7 +1,14 @@
 // A custom command line shell 
 #include<stdio.h>
 int main(){
+char command[125];
 FILE *file;
 file = fopen("file.txt","w");
+if(file==NULL){
+printf("File does not exist !!");
+}
+printf("Enter command ~");
+scanf("%s",command);
+fprintf(file,"%s",command);
 return 0;
 }
