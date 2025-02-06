@@ -10,5 +10,12 @@ printf("File does not exist !!");
 printf("Enter command ~");
 scanf("%s",command);
 fprintf(file,"%s",command);
+if(strcmp(command,"Exit")==0 || strcmp(command,"exit")==0){
+fclose(file);
+printf("You choose to exit.");
+}
+else{
+// Yet to write 
+}
 return 0;
 }
