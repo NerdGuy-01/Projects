@@ -1,21 +1,35 @@
 // A custom command line shell 
 #include<stdio.h>
+#include<unistd.h> // Used for fork()
+#include<string.h> 
+#include<stdlib.h>   
+#include<sys/types.h> // Used for pid_t variable 
+#include<sys/wait.h> // Used for waitpid()
+#include<errno.h> // Error handling 
+
+#define LINE 1024
+#define AGRS 64
+
 int main(){
-char command[125];
+char command[LINE];
+char *args[ARGS];
 FILE *file;
 file = fopen("file.txt","w");
 if(file==NULL){
 printf("File does not exist !!");
 }
-printf("Enter command ~");
+printf("myshell$");
+fflush(stdout);
 scanf("%s",command);
 fprintf(file,"%s",command);
 if(strcmp(command,"Exit")==0 || strcmp(command,"exit")==0){
-fclose(file);
-printf("You choose to exit.");
+  fclose(file);
+  printf("You choose to exit.");
 }
 else{
-// Yet to write 
+  while(1){
+    // yet to write 
+  }
 }
 return 0;
 }
