@@ -28,7 +28,14 @@ if(strcmp(command,"Exit")==0 || strcmp(command,"exit")==0){
 }
 else{
   while(1){
-    // yet to write 
+  if(fgets(command,sizeof(command),stdin)==NULL){
+  printf("\n);
+break;
+  }
+// Skips empty commands 
+if(strlen(command)==0){
+continue;
+}
   }
 }
 return 0;
