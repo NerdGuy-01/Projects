@@ -42,7 +42,7 @@ else{
       agrs[i++] = token;
       token = strtok(NULL,"\t"); //it keeps return  next until token become null
     }
-    agrs[i] = NULL; // Null terminated array
+    agrs[i] = NULL; // Null terminated array  
     // Creating a child process 
    pid_t pid = fork();
    if(pid<0){
