@@ -32,7 +32,7 @@ else{
       printf("\n");
       break;
     }
-    if(stlen(command)==0){
+    if(strlen(command)==0){
       continue;
     }
     // Parsing the String into tokens 
