@@ -43,7 +43,7 @@ else{
       token = strtok(NULL,"\t"); //it keeps return  next until token become null
     }
     agrs[i] = NULL; // Null terminated array
-   // Creating a child process 
+    // Creating a child process 
    pid_t pid = fork();
    if(pid<0){
      perror("fork failed");
