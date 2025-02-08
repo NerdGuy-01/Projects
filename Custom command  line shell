@@ -12,7 +12,7 @@
 
 int main(){
 char command[LINE];
-char *args[ARGS];
+char *agrs[AGRS];
 FILE *file;
 file = fopen("file.txt","w");
 if(file==NULL){
@@ -28,14 +28,39 @@ if(strcmp(command,"Exit")==0 || strcmp(command,"exit")==0){
 }
 else{
   while(1){
-  if(fgets(command,sizeof(command),stdin)==NULL){
-  printf("\n);
-break;
-  }
-// Skips empty commands 
-if(strlen(command)==0){
-continue;
-}
+    if(fgets(command,sizeof(command),stdin)==NULL){
+      printf("\n");
+      break;
+    }
+    if(stlen(command)==0){
+      continue;
+    }
+    // Parsing the String into tokens 
+    int i=0;
+    char *token = strtok(command,"\t");
+    while(token!=NULL && i<AGRS-1){
+      agrs[i++] = token;
+      token = strtok(NULL,"\t"); //it keeps return  next until token become null
+    }
+    agrs[i] = NULL; // Null terminated array
+   // Creating a child process 
+   pid_t pid = fork();
+   if(pid<0){
+     perror("fork failed");
+     continue;
+   }
+   else if(pid ==0){
+     if(execup(args[0],agrs)<0){
+       perror("execup failed");
+       exit(EXIT_FAILURE); 
+     }   
+   }
+   else {
+     int status;
+     if(waitpid(pid,&status,0)<0){
+       perror("Waitpid error");
+     }
+   } 
   }
 }
 return 0;
