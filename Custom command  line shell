@@ -19,7 +19,7 @@ if(file==NULL){
 printf("File does not exist !!");
 }
 printf("myshell$");
-fflush(stdout);
+fflush(stdout); // This removes all the buffer 
 scanf("%s",command);
 fprintf(file,"%s",command);
 if(strcmp(command,"Exit")==0 || strcmp(command,"exit")==0){
