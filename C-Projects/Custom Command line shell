@@ -1,6 +1,6 @@
 // A custom command line shell 
 #include<stdio.h>
-#include<unistd.h> // Used for fork()
+#include<unistd.h> //  for fork() function
 #include<string.h> 
 #include<stdlib.h>   
 #include<sys/types.h> // Used for pid_t variable 
