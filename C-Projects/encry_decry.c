@@ -5,6 +5,7 @@
 int main(){
  char words[WORDS];
   printf("Enter Passoword");
+ fflushout(stdout);
   fgets(words,sizeof(words),stdin);
   return 0;
 }
