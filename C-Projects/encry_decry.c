@@ -16,7 +16,7 @@ void main(){
 }
 
 // #define WORDS 100
-// int main(){
+// void main(){
 //  char words[WORDS];
 //   printf("Enter Passoword");
 //  fflush(stdout);
