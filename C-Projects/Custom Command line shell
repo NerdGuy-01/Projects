@@ -17,7 +17,7 @@ printf("File does not exist !!");
 }
 printf("myshell$");
 fflush(stdout); // This removes all the buffer 
-fgets(command,sizeof(of),stdin);
+fgets(command,sizeof(command),stdin);
 fprintf(file,"%s",command);
 
 if(strcmp(command,"Exit")==0 || strcmp(command,"exit")==0){
