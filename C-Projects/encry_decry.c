@@ -3,13 +3,13 @@
 
 void main(){
     char string[100];
-    char choice[10];
+    char choice[50];
     printf("Enter the string:");
     scanf("%s",string);
 
     for(int i=0;string[i]!='\0';i++){
-        if((string[i]>=65 && string[i]<=90) || (string[i]>=97 && string[i]<=122))
-            string[i]+=2;
+        if((string[i]>=65 && string[i]<=90) || (string[i]>=97 && string[i]<=122) ||  string[i]>=33 && string[i]<=42||string[i]==64)
+            string[i]+=17;
     
     }
 
@@ -19,7 +19,7 @@ void main(){
 scanf("%s",choice);
 if(strcmp(choice,"yes")==0 || strcmp(choice,"Yes")==0){
     for(int i=0;string[i]!='\0';i++){
-        string[i] -= 2;
+        string[i] -= 17;
     }
     printf("Your original passoword is : %s",string);
 }
