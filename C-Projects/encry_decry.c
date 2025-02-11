@@ -3,6 +3,7 @@
 
 void main(){
     char string[100];
+    char choice[10];
     printf("Enter the string:");
     scanf("%s",string);
 
@@ -23,7 +24,7 @@ if(strcmp(choice,"yes")==0 || strcmp(choice,"Yes")==0){
     printf("Your original passoword is : %s",string);
 }
 }
-}
+
 
 // #define WORDS 100
 // void main(){
