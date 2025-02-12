@@ -1,3 +1,4 @@
+// The following code performs encryptions and decryption 
 #include<stdio.h>
 #include<string.h>
 
