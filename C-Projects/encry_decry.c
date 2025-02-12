@@ -39,13 +39,3 @@ if(strcmp(choice,"yes")==0 || strcmp(choice,"Yes")==0){
     printf("Your original string  is : %s",string);
 }
 }
-
-
-// #define WORDS 100
-// void main(){
-//  char words[WORDS];
-//   printf("Enter Passoword");
-//  fflush(stdout);
-//   fgets(words,sizeof(words),stdin);
-//   return 0;
-// }
