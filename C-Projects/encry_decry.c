@@ -35,7 +35,7 @@ if(strcmp(choice,"yes")==0 || strcmp(choice,"Yes")==0){
         }
     
     }
-    printf("Your original passoword is : %s",string);
+    printf("Your original string  is : %s",string);
 }
 }
 
