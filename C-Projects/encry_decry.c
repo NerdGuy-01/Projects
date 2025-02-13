@@ -39,9 +39,11 @@ void main(){
   // For decryption
     printf("\nWant to decrypt?(yes or no )");
     scanf("%s",choice);
-    if(strcmp(choice,"yes")==0 || strcmp(choice,"Yes")==0)
+    if(strcmp(choice,"yes")==0 || strcmp(choice,"Yes")==0){
         decrypt2(string);
-
-    
-    printf("Your original string  is : %s",string);
+        printf("Your original string  is : %s",string); 
+    }
+}
+else{
+    printf("Your encrypted sting is %s",string);
 }
