@@ -3,7 +3,7 @@
 #include<string.h>
 
 //Encryption1: Shifting the alphabetical characters by 2 steps
-void encryption1(char *str){
+void encrypt1(char *str){
     for(int i=0;str[i]!='\0';i++){
         if((str[i]>=65 && str[i]<=90) || (str[i]>=97 && str[i]<=122))
             str[i]+=2; //str[i]=str[i]+2;
@@ -24,7 +24,7 @@ void encrypt2(char *str){
     }
 }
 
-void decryption1(char *estr){
+void decrypt1(char *estr){
     for(int i=0;estr[i]!='\0';i++){
         if((estr[i]>=65 && estr[i]<=90) || (estr[i]>=97 && estr[i]<=122))
             estr[i]-=2;   //estr[i]=estr[i]-2;
