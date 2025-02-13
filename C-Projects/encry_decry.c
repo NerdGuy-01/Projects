@@ -18,10 +18,10 @@ void decrypt2(char *str){
     for(int i=0;str[i]!='\0';i++){
         if((str[i]>=65 && str[i]<=90) || (str[i]>=97 && str[i]<=122) ||  str[i]>=33 && str[i]<=42||str[i]==64){
          if(i<=5){
-             str[i] -= 5;
+             str[i] -= 2;
          }
          else{
-             str[i] -= 7;
+             str[i] -= 5;
          }
         }
     
