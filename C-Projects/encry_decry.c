@@ -32,7 +32,7 @@ void decrypt2(char *str){
 void main(){
     char string[100];
     char choice[50];
-    printf("Enter the string:");
+    printf("Enter The password:");
     scanf("%s",string);
     encrypt2(string);
      printf("The encrypted string is:- %s",string);
