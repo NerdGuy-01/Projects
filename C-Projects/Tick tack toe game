@@ -1,3 +1,4 @@
+// Tick tack toe Game
 #include<stdio.h>
 #include<string.h>
 char board[3][3];
