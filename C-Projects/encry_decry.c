@@ -35,7 +35,7 @@ void main(){
     printf("Enter The password:");
     scanf("%s",string);
     encrypt2(string);
-     printf("The encrypted string is:- %s",string);
+     printf("The encrypted Password is:- %s",string);
   // For decryption
     printf("\nWant to decrypt?(yes or no )");
     scanf("%s",choice);
