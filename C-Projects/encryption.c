@@ -60,11 +60,11 @@ int main() {
     printf("Select encryption method (1: Caesar Cipher, 2: XOR): ");
     scanf("%d", &method);
 
-    if (method == 1) {
+    if (method == 1 || strcmp(method,"Caeser Cipher")==0) {
         printf("Enter shift value for Caesar Cipher: ");
         scanf("%d", &shift);
         encryptCaesar(data, shift);
-    } else if (method == 2) {
+    } else if (method == 2 || strcmp(method,"XOR")) {
         shift = 0; // No shift needed for XOR
         encryptXOR(data, key);
     } else {
