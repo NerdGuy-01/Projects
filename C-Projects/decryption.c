@@ -62,9 +62,9 @@ int main() {
         return 1;
     }
     
-    if (method == 1) {
+    if (method == 1 || strcmp(method,"Caeser Cipher")==0) {
         decryptCaesar(data, shift);
-    } else if (method == 2) {
+    } else if (method == 2 || strcmp(method,"XOR")==0) {
         decryptXOR(data, key);
     } else {
         printf("Invalid encryption method!\n");
