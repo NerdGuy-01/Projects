@@ -54,7 +54,7 @@ PROCESS_INFORMATION pi ={0}; // stores process details
 si.cb = sizeof(pi); // Required to set the size of struct
 
 if(!CreateProcess(NULL,cmdstring,NULL,NULL,NULL,FALSE,0,NULL,NULL,&si,&pi)){
-printf("Error!! Unable to execute command/\n");
+printf("Error!! Unable to execute command\n");
 }
 else{
 // Wait for process to process to complete 
