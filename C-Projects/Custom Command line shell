@@ -1,4 +1,4 @@
-// A custom command line shell 
+// A Custom Command Line shell 
 #include<stdio.h>
 #include<string.h> 
 #include<stdlib.h>  
