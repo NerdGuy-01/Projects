@@ -16,7 +16,7 @@ if(file==NULL){
 printf("Error!! FIle is not opening .");
 }
 printf("myshell$");
-fflush(stdout); // This removes all the buffer 
+fflush(stdout); // Removes Buffer
 fgets(command,sizeof(command),stdin);
 fprintf(file,"%s",command);
 
