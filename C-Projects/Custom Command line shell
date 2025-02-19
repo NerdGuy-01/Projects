@@ -13,7 +13,7 @@ char *agrs[AGRS];
 FILE *file;
 file = fopen("file.txt","w");
 if(file==NULL){
-printf("File does not exist !!");
+printf("Error!! FIle is not opening .");
 }
 printf("myshell$");
 fflush(stdout); // This removes all the buffer 
