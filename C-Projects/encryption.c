@@ -5,7 +5,7 @@
 #define FILE_NAME "encrypted_data.txt"
 
 void encryptPwd(char *pwd, char *encPwd) {
-    char key = 'S'; // Simple XOR encryption key for password
+    char key = 'S'; // Simple XOR encryption key for Password 
     int len = strlen(pwd);
     for (int i = 0; i < len; i++) {
         encPwd[i] = pwd[i] ^ key;
