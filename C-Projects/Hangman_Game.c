@@ -3,5 +3,5 @@
 void Guess()
 {
   char answer[10];
-  printf
+  printf("Hello welcome to this Game");
 }
