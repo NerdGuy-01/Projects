@@ -4,7 +4,7 @@ form.addEventListener('submit',function(event){
     event.preventDefault()
 
   const height =   parseInt(document.querySelector('#height').value)  // because the value we will get will be in string 
-  const weight =   parseInt(document.querySelector('#weight').value)  // if we declare the value before form then empty value will be stored in height
+  const weight =   parseInt(document.querySelector('#weight').value)  // If we declare the value before form then empty value will be stored in height
   const result = document.querySelector('#result')
 
   if(height === '' || height < 0 || isNaN(height)){ 
