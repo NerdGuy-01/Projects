@@ -1,4 +1,4 @@
-// This is my first project A calculator and also learned time library 
+// This is my first project A calculator and also learned Time Library 
 #include<stdio.h>
 #include<time.h>
 int main(){
